@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ahmed Farid | Extraordinary Artist & Cultural Ambassador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rich-black: #0D0D0D;
+            --deep-charcoal: #1A1A1A;
+            --warm-gold: #C9A96E;
+            --antique-gold: #B8860B;
+            --cream-white: #FAF7F0;
+            --subtle-gold: #F4E4BC;
+            --rich-brown: #2C1810;
+            --dark-gold: #8B7355;
+            --platinum: #E5E4E2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--rich-black);
+            color: var(--cream-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+            padding: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--warm-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+        }
+
+        .nav-links a {
+            color: var(--cream-white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--warm-gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--warm-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--rich-black) 0%, var(--deep-charcoal) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(201, 169, 110, 0.1) 0%, transparent 50%);
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            color: var(--warm-gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.8rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            color: var(--cream-white);
+            letter-spacing: -1px;
+        }
+
+        .hero-description {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: var(--platinum);
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: transparent;
+            color: var(--warm-gold);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid var(--warm-gold);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--warm-gold);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        .cta-button:hover {
+            color: var(--rich-black);
+        }
+
+        .hero-image {
+            position: relative;
+            height: 700px;
+            background: linear-gradient(135deg, var(--deep-charcoal) 0%, var(--rich-brown) 100%);
+            border: 1px solid var(--dark-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            pointer-events: none;
+        }
+
+        /* Credentials Section */
+        .credentials {
+            padding: 150px 0;
+            background: var(--deep-charcoal);
+            position: relative;
+        }
+
+        .credentials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--warm-gold), transparent);
+        }
+
+        .credentials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: var(--warm-gold);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--platinum);
+            margin-bottom: 80px;
+            font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin-bottom: 100px;
+        }
+
+        .credential-card {
+            background: var(--rich-black);
+            padding: 60px 40px;
+            border: 1px solid var(--dark-gold);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .credential-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--warm-gold), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .credential-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .credential-card:hover {
+            border-color: var(--warm-gold);
+            transform: translateY(-10px);
+        }
+
+        .credential-icon {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .credential-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--cream-white);
+            font-weight: 400;
+        }
+
+        .credential-description {
+            color: var(--platinum);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 150px 0;
+            background: var(--rich-black);
+        }
+
+        .portfolio-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            height: 350px;
+            background: var(--deep-charcoal);
+            border: 1px solid var(--dark-gold);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.02);
+            border-color: var(--warm-gold);
+        }
+
+        .portfolio-item:hover::before {
+            border-color: var(--warm-gold);
+        }
+
+        .portfolio-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            background: linear-gradient(transparent, rgba(13, 13, 13, 0.9));
+        }
+
+        .portfolio-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--warm-gold);
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .portfolio-subtitle {
+            color: var(--platinum);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 150px 0;
+            background: var(--deep-charcoal);
+            position: relative;
+        }
+
+        .booking::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--warm-gold), transparent);
+        }
+
+        .booking-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 50px;
+            text-align: center;
+        }
+
+        .booking-form {
+            background: var(--rich-black);
+            padding: 80px 60px;
+            border: 1px solid var(--dark-gold);
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .booking-form::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            pointer-events: none;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--warm-gold);
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 18px 25px;
+            background: var(--deep-charcoal);
+            border: 1px solid var(--dark-gold);
+            color: var(--cream-white);
+            font-size: 16px;
+            font-family: 'Cormorant Garamond', serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus, 
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--warm-gold);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            display: inline-block;
+            padding: 20px 60px;
+            background: transparent;
+            color: var(--warm-gold);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid var(--warm-gold);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .submit-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--warm-gold);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .submit-button:hover::before {
+            left: 0;
+        }
+
+        .submit-button:hover {
+            color: var(--rich-black);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--rich-black);
+            padding: 100px 0 50px;
+            border-top: 1px solid var(--dark-gold);
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--warm-gold);
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .footer-section p, 
+        .footer-section a {
+            color: var(--platinum);
+            text-decoration: none;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .footer-section a:hover {
+            color: var(--warm-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(201, 169, 110, 0.2);
+            color: var(--dark-gold);
+            font-size: 14px;
+        }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--warm-gold);
+            text-align: center;
+            font-style: italic;
+            max-width: 800px;
+            margin: 60px auto;
+            line-height: 1.6;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 1px;
+            background: var(--warm-gold);
+            margin: 40px auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content,
+            .credentials-container,
+            .portfolio-container,
+            .booking-container,
+            .footer-container {
+                padding: 0 25px;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ahmed Farid</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#credentials">Credentials</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Partnership</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">Extraordinary Artist & Cultural Ambassador</p>
+                <h1 class="hero-title">DR. AHMED<br>FARID</h1>
+                <p class="hero-description">
+                    EB-1A recipient, UN Goodwill Ambassador, and internationally acclaimed artist bridging 
+                    ancient Egyptian heritage with contemporary luxury design. Featured at Houston Museum 
+                    of Natural Science and 50+ international exhibitions across four continents.
+                </p>
+                <a href="#contact" class="cta-button">Request Private Consultation</a>
+            </div>
+            <div class="hero-image">
+                <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative;">
+                    <!-- Elegant monogram -->
+                    <div style="width: 150px; height: 150px; border: 2px solid var(--warm-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; position: relative;">
+                        <div style="width: 120px; height: 120px; border: 1px solid rgba(201, 169, 110, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--warm-gold); font-weight: 300;">AF</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Status indicators -->
+                    <div>
+                        <p style="color: var(--warm-gold); font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 10px;">EB-1A EXTRAORDINARY ARTIST</p>
+                        <p style="color: var(--platinum); font-size: 1rem; letter-spacing: 1px; margin-bottom: 10px;">UN GOODWILL AMBASSADOR</p>
+                        <p style="color: var(--platinum); font-size: 1rem; letter-spacing: 1px; margin-bottom: 30px;">NETFLIX ACTOR & CULTURAL VISIONARY</p>
+                        
+                        <div class="section-divider" style="width: 150px; margin: 30px auto;"></div>
+                        
+                        <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                            <div style="text-align: center;">
+                                <div style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--warm-gold); font-weight: 300;">50+</div>
+                                <div style="font-size: 0.9rem; color: var(--platinum); text-transform: uppercase; letter-spacing: 1px;">Exhibitions</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--warm-gold); font-weight: 300;">27+</div>
+                                <div style="font-size: 0.9rem; color: var(--platinum); text-transform: uppercase; letter-spacing: 1px;">TV Series</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--warm-gold); font-weight: 300;">4</div>
+                                <div style="font-size: 0.9rem; color: var(--platinum); text-transform: uppercase; letter-spacing: 1px;">Continents</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section id="credentials" class="credentials">
+        <div class="credentials-container">
+            <h2 class="section-title">Distinguished Credentials</h2>
+            <p class="section-subtitle">
+                A rare convergence of artistic mastery, diplomatic influence, and entertainment industry recognition, 
+                creating unprecedented opportunities for luxury brand partnerships and cultural collaborations.
+            </p>
+            
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div class="credential-icon">🏛️</div>
+                    <h3 class="credential-title">EB-1A Extraordinary Artist</h3>
+                    <p class="credential-description">
+                        United States EB-1A Extraordinary Ability lifetime visa recognition (2025) 
+                        for outstanding achievements in the arts—the highest artistic distinction 
+                        available to international artists.
+                    </p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🇺🇳</div>
+                    <h3 class="credential-title">UN Goodwill Ambassador</h3>
+                    <p class="credential-description">
+                        United Nations Goodwill Ambassador (2021) with global diplomatic credentials 
+                        and cultural advocacy platform reaching international markets and 
+                        high-net-worth patrons worldwide.
+                    </p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🎭</div>
+                    <h3 class="credential-title">Netflix Actor & TV Presenter</h3>
+                    <p class="credential-description">
+                        Featured in 27+ television drama series including Netflix productions. 
+                        Conducted celebrity interviews with A-list talents: Keanu Reeves, 
+                        Eva Mendes, John Malkovich, Francis Ford Coppola.
+                    </p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🎓</div>
+                    <h3 class="credential-title">Academic Excellence</h3>
+                    <p class="credential-description">
+                        Ph.D. Philosophy of Art, Academy of Art San Francisco (2014). 
+                        Master's Fine Arts & Symbols, Alexandria University (2008). 
+                        International speaker at prestigious institutions.
+                    </p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🏛️</div>
+                    <h3 class="credential-title">Museum Recognition</h3>
+                    <p class="credential-description">
+                        "The Secret of the Golden Ramses" featured at Houston Museum of Natural Science. 
+                        50+ international exhibitions across Egypt, USA, Europe, and Asia, 
+                        establishing museum-quality artistic credibility.
+                    </p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">🌍</div>
+                    <h3 class="credential-title">Global Cultural Impact</h3>
+                    <p class="credential-description">
+                        International motivational speaker, humanitarian advocate, and cultural bridge-builder. 
+                        Expertise in cross-cultural luxury market penetration and 
+                        high-value patron relationship development.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "Art is the universal language that transcends borders, cultures, and generations—
+                creating lasting value for those who dare to invest in beauty and meaning."
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <h2 class="section-title">Signature Collections</h2>
+            <p class="section-subtitle">
+                Each artwork represents the intersection of ancient Egyptian wisdom and contemporary luxury aesthetics, 
+                meticulously crafted for discerning collectors and prestigious brand collaborations.
+            </p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">The Secret of the Golden Ramses</h3>
+                        <p class="portfolio-subtitle">Houston Museum Featured</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Gate of the Soul</h3>
+                        <p class="portfolio-subtitle">International Exhibition Series</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Universe Between Light & Freedom</h3>
+                        <p class="portfolio-subtitle">Dubai Premiere Collection</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Journey of the Soul</h3>
+                        <p class="portfolio-subtitle">Cairo 2020 Exhibition</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">The Soul Mate Series</h3>
+                        <p class="portfolio-subtitle">Luxury Brand Applications</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Cultural Bridge Collection</h3>
+                        <p class="portfolio-subtitle">Brussels International Recognition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="contact" class="booking">
+        <div class="booking-container">
+            <h2 class="section-title">Private Consultation Request</h2>
+            <p class="section-subtitle">
+                Connect with Dr. Ahmed Farid for exclusive partnership discussions. 
+                Each consultation is personally tailored to explore synergies between 
+                your brand vision and his distinguished artistic portfolio.
+            </p>
+            
+            <div class="booking-form">
+                <form id="consultation-form" onsubmit="submitForm(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="organization">Organization/Brand</label>
+                            <input type="text" id="organization" name="organization" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-name">Principal Contact</label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title/Position</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Direct Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="consultation-type">Partnership Interest</label>
+                            <select id="consultation-type" name="consultation-type" required>
+                                <option value="">Select Partnership Type</option>
+                                <option value="luxury-brand">Luxury Brand Collaboration</option>
+                                <option value="museum-gallery">Museum/Gallery Exhibition</option>
+                                <option value="private-collection">Private Collection Acquisition</option>
+                                <option value="brand-ambassador">Brand Ambassador Partnership</option>
+                                <option value="entertainment">Entertainment Collaboration</option>
+                                <option value="cultural-diplomacy">Cultural Diplomacy Project</option>
+                                <option value="investment">Investment Opportunity</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="investment-range">Investment Range</label>
+                            <select id="investment-range" name="investment-range">
+                                <option value="">Select Range</option>
+                                <option value="100k-250k">$100,000 - $250,000</option>
+                                <option value="250k-500k">$250,000 - $500,000</option>
+                                <option value="500k-1m">$500,000 - $1,000,000</option>
+                                <option value="1m-2.5m">$1,000,000 - $2,500,000</option>
+                                <option value="2.5m-5m">$2,500,000 - $5,000,000</option>
+                                <option value="5m+">$5,000,000+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Preferred Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="immediate">Immediate (1-3 months)</option>
+                                <option value="q2-2025">Q2 2025 (3-6 months)</option>
+                                <option value="h2-2025">H2 2025 (6-12 months)</option>
+                                <option value="2026">2026 and beyond</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="project-vision">Partnership Vision</label>
+                        <textarea id="project-vision" name="project-vision" placeholder="Please describe your partnership vision, target demographics, and how Dr. Farid's unique credentials—EB-1A status, UN Ambassador role, Netflix actor profile, and international exhibition history—align with your strategic objectives..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button" id="submit-btn">
+                        Request Private Consultation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dr. Ahmed Farid</h3>
+                    <p>EB-1A Extraordinary Artist</p>
+                    <p>UN Goodwill Ambassador</p>
+                    <p>Netflix Actor & Cultural Visionary</p>
+                    <p>International Exhibition Artist</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Distinguished Credentials</h3>
+                    <p>USA EB-1A Extraordinary Ability Recognition</p>
+                    <p>United Nations Goodwill Ambassador</p>
+                    <p>Ph.D. Philosophy of Art</p>
+                    <p>27+ Television Drama Series</p>
+                </div>
+                <div class="footer-section">
+                    <h3>International Recognition</h3>
+                    <p>Houston Museum of Natural Science</p>
+                    <p>50+ Exhibitions Across 4 Continents</p>
+                    <p>Cairo • Dubai • Brussels • Houston</p>
+                    <p>Celebrity Interview Portfolio</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Partnership Opportunities</h3>
+                    <p>Luxury Brand Collaborations</p>
+                    <p>Museum & Gallery Partnerships</p>
+                    <p>Private Collection Acquisitions</p>
+                    <p>Cultural Diplomacy Projects</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Ahmed Farid. All rights reserved. | Digital presence by Jay's Frames</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.innerHTML = 'Processing Request...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Thank you for your consultation request. Dr. Ahmed Farid\'s team will contact you within 24 hours to schedule your private consultation.');
+                
+                // Reset form
+                document.getElementById('consultation-form').reset();
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(13, 13, 13, 0.98)';
+                navbar.style.borderBottom = '1px solid rgba(201, 169, 110, 0.3)';
+            } else {
+                navbar.style.background = 'rgba(13, 13, 13, 0.95)';
+                navbar.style.borderBottom = '1px solid rgba(201, 169, 110, 0.2)';
+            }
+        });
+
+        // Portfolio hover effects
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Credential cards animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.credential-card, .portfolio-item');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
